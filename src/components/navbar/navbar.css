@@ -1,0 +1,86 @@
+.siteLogo {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.8s ease-in-out, top 1s ease-in-out, left 1s ease-in-out;
+}
+.siteLogo video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.8s ease-in-out;
+}
+.siteLogo.moved {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+}
+.siteLogo.moved video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 10vh;
+    margin-left: 20px;
+    border-radius: 0px 0px 16px 16px;
+    cursor: pointer;
+}
+.Menu {
+  border-radius: 16px;
+  width: 80%;
+  height: 10vh;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menuContainer{
+    background-color:white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 24px 0px 24px;
+    border-radius: 16px;
+}
+.menuOptions {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-right: 48px;
+    height: 90%;    
+}
+.menuItem {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+.menuItem::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2a4998;
+    transition: width 0.3s ease-in-out;
+    cursor: pointer;
+}
+.menuItem:hover::after {
+    width: 100%;
+}
+.menuItem:hover {
+    color: #2a4998;
+    cursor: pointer;
+}
+
